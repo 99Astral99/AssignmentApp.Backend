@@ -22,7 +22,7 @@ namespace AssignmentApp.Application.AssignmentComments.Commands.CreateAssignment
 
         public async Task<Result<ResponseAssignmentComment>> Handle(CreateAssignmentCommentCommand request, CancellationToken cancellationToken)
         {
-            var assignment = await _context.Assignments.FirstOrDefaultAsync(x => x.Id == request.AssignmentId);
+            var assignment = await _context.Assignments.AsNoTracking().FirstOrDefaultAsync(x => x.Id == request.AssignmentId);
             if (assignment is null)
                 throw new NotFoundException(nameof(Assignment), request.AssignmentId);
 
