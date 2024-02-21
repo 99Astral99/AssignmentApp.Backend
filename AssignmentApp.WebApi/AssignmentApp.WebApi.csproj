@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Application\AssignmentApp.Application.csproj" />
     <ProjectReference Include="..\AssignmentApp.Persistence\AssignmentApp.Persistence.csproj" />
   </ItemGroup>
