@@ -15,7 +15,10 @@
 - - - Npgsql
 - CQRS (MediatR)
 - JWT
+- AutoMapper
+- FluentResults
 - xUnit
+
 
 Требования ĸ приложению, для ĸоторого нужно разработать
 API
