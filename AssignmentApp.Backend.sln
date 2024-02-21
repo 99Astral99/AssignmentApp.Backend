@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentApp.Domain", "Ass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentApp.Persistence", "AssignmentApp.Persistence\AssignmentApp.Persistence.csproj", "{25DB9FAD-9157-4230-A18C-4356300115C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentApp.WebApi", "AssignmentApp.WebApi\AssignmentApp.WebApi.csproj", "{2E9DD5D1-C4D4-4A8B-8036-BF1EBAD6B586}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{25DB9FAD-9157-4230-A18C-4356300115C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25DB9FAD-9157-4230-A18C-4356300115C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25DB9FAD-9157-4230-A18C-4356300115C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9DD5D1-C4D4-4A8B-8036-BF1EBAD6B586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9DD5D1-C4D4-4A8B-8036-BF1EBAD6B586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9DD5D1-C4D4-4A8B-8036-BF1EBAD6B586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9DD5D1-C4D4-4A8B-8036-BF1EBAD6B586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{ACBCC077-CA26-4BCF-B397-361A2DBAEE79} = {70D20C3B-376F-4CEB-9115-9192AFA6B5BC}
 		{9A74FA82-51E1-4968-AD4C-4DF54C553EFF} = {70D20C3B-376F-4CEB-9115-9192AFA6B5BC}
 		{25DB9FAD-9157-4230-A18C-4356300115C6} = {8586E73A-B08D-4592-BB1F-CB08164F8879}
+		{2E9DD5D1-C4D4-4A8B-8036-BF1EBAD6B586} = {B1F52E3E-6E6E-4C7D-8838-42350A7290A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C258243D-8612-4106-9810-4C546E5DA4F0}
