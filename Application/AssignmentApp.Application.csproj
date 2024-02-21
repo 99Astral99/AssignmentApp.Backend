@@ -16,4 +16,8 @@
     <ProjectReference Include="..\AssignmentApp.Domain\AssignmentApp.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\" />
+  </ItemGroup>
+
 </Project>
