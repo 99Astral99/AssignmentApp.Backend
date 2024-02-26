@@ -53,7 +53,7 @@ namespace AssignmentApp.Persistence.Migrations
 
                     b.HasIndex("AssignmentListId");
 
-                    b.ToTable("Assignments");
+                    b.ToTable("Assignments", (string)null);
                 });
 
             modelBuilder.Entity("AssignmentApp.Domain.Entities.AssignmentComment", b =>
@@ -73,7 +73,7 @@ namespace AssignmentApp.Persistence.Migrations
 
                     b.HasIndex("AssignmentId");
 
-                    b.ToTable("AssignmentComments");
+                    b.ToTable("AssignmentComments", (string)null);
                 });
 
             modelBuilder.Entity("AssignmentApp.Domain.Entities.AssignmentList", b =>
@@ -98,7 +98,7 @@ namespace AssignmentApp.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AssignmentLists");
+                    b.ToTable("AssignmentLists", (string)null);
                 });
 
             modelBuilder.Entity("AssignmentApp.Domain.Entities.User", b =>
@@ -125,7 +125,7 @@ namespace AssignmentApp.Persistence.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("AssignmentApp.Domain.Entities.Assignment", b =>

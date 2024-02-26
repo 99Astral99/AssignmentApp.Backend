@@ -13,6 +13,7 @@ namespace AssignmentApp.Persistence.EntityTypeConfigurations
             builder.Property(x => x.Description).HasColumnName("Описание");
 
             builder.Property(x => x.DateCreated).HasColumnName("Дата_создания");
+
             builder.Property(x => x.CurrentStatus).HasConversion<string>().HasColumnName("Статус");
 
             builder.HasMany(x => x.Comments)
