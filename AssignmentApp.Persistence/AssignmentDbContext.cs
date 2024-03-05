@@ -1,5 +1,6 @@
 ﻿using AssignmentApp.Application.Interfaces;
 using AssignmentApp.Domain.Entities;
+using AssignmentApp.Persistence.Interceptors;
 using Microsoft.EntityFrameworkCore;
 
 namespace AssignmentApp.Persistence
@@ -8,6 +9,11 @@ namespace AssignmentApp.Persistence
     {
         public AssignmentDbContext(DbContextOptions options) : base(options) { }
 
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.AddInterceptors(new DataInterceptor());
+        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(typeof(AssignmentDbContext).Assembly);
