@@ -21,6 +21,8 @@ services.AddScoped<IPasswordHasher, PasswordHasher>();
 services.AddScoped<IJwtProvider, JwtProvider>();
 services.AddApiAuthentication(configuration);
 
+services.AddResponseCompression();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -53,6 +55,7 @@ app.UseCookiePolicy(new CookiePolicyOptions
 
 app.UseHttpsRedirection();
 
+app.UseResponseCompression();
 app.UseAuthentication();
 app.UseAuthorization();
 
