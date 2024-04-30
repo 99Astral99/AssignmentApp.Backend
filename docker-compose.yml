@@ -1,0 +1,41 @@
+version: '3.4'
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+  assignmentapp.webapi:
+    image: ${DOCKER_REGISTRY-}assignmentappwebapi
+    container_name: assignment-api
+    build:
+      context: .
+      dockerfile: AssignmentApp.WebApi/Dockerfile
+    ports:
+     - "8081:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+    depends_on: 
+     - assignment-db
+    networks: 
+     - backend
+
+  assignment-db:
+    container_name: "assignment-database"
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+     POSTGRES_DB: "assignment-db"
+     POSTGRES_USER: "postgres"
+     POSTGRES_PASSWORD: "postgres"
+     POSTGRES_HOST: "assignmentapi"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    networks: 
+      - backend
+
+volumes:
+   postgres-data: {}
+
+
